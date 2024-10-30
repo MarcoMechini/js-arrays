@@ -36,3 +36,19 @@ console.log('array con nomi superiori ai 5 caratteri', longNames);
 
 // 3. Rimuovi 'Ed' dall'array teachers
 
+const copyTeachers = teachers;
+for (let i = 0; i < copyTeachers.length; i++) {
+  const currentTeachers = copyTeachers[i];
+  if (currentTeachers == 'Ed') {
+    copyTeachers.splice(i, 1);
+  }
+}
+console.log('Tolto il nome Ed con ciclo for', copyTeachers);
+
+
+const copyTeachers2 = teachers;
+// console.log(copyTeachers2);
+const garbage = copyTeachers2.indexOf('Ed');
+copyTeachers2.splice(garbage, 1);
+console.log('Tolto il nome Ed con ciclo indexOf', copyTeachers);
+
